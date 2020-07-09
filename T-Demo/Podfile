@@ -1,0 +1,29 @@
+# Uncomment the next line to define a global platform for your project
+platform :ios, '11.0'
+
+target 'T-Demo' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+  # Pods for T-Demo
+  pod 'JPVideoPlayer', '~> 3.2.0-beta'
+
+
+  pod 'Amplify'
+  pod 'Amplify/Tools'
+  pod 'AmplifyPlugins/AWSAPIPlugin'
+  pod 'AmplifyPlugins/AWSDataStorePlugin'
+
+
+  target 'T-DemoTests' do
+    inherit! :search_paths
+    # Pods for testing
+
+
+  end
+
+  target 'T-DemoUITests' do
+    # Pods for testing
+  end
+
+end
