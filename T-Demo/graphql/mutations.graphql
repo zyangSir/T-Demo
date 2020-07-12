@@ -1,0 +1,58 @@
+# this is an auto generated file. This will be overwritten
+mutation CreateTUser(
+  $input: CreateTUserInput!
+  $condition: ModelTUserConditionInput
+) {
+  createTUser(input: $input, condition: $condition) {
+    id
+    nickName
+    account
+    signature
+    email
+    priority
+    description
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation UpdateTUser(
+  $input: UpdateTUserInput!
+  $condition: ModelTUserConditionInput
+) {
+  updateTUser(input: $input, condition: $condition) {
+    id
+    nickName
+    account
+    signature
+    email
+    priority
+    description
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
+mutation DeleteTUser(
+  $input: DeleteTUserInput!
+  $condition: ModelTUserConditionInput
+) {
+  deleteTUser(input: $input, condition: $condition) {
+    id
+    nickName
+    account
+    signature
+    email
+    priority
+    description
+    _version
+    _deleted
+    _lastChangedAt
+    createdAt
+    updatedAt
+  }
+}
