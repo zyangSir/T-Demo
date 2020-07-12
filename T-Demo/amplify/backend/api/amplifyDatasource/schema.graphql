@@ -1,10 +1,15 @@
-type Task @model {
-  id: ID!
-  title: String!
-  description: String
-  status: String
+enum Priority {
+  LOW
+  NORMAL
+  HIGH
 }
-type Note @model {
+
+type TUser @model {
   id: ID!
-  content: String!
+  nickName: String
+  account: String!
+  signature: String
+  email: String
+  priority: Priority
+  description: String
 }

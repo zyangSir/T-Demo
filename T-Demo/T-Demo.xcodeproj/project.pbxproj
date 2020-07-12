@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		00FF2AE526AF0924E45D8906 /* Pods_T_DemoTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 41F39BB2151E228BD34E3905 /* Pods_T_DemoTests.framework */; };
+		1A9D1FD8837242188D13B93A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 98493D680A95443CAA2AE226 /* awsconfiguration.json */; };
 		242D7C43FEEC00812C63C5AC /* Pods_T_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF7D2CFAEB7F4B8238DC80 /* Pods_T_Demo.framework */; };
+		3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = A320C886E84B444E9576545B /* TUser+Schema.swift */; };
+		84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCE0079304165B35E7ED2 /* TUser.swift */; };
 		BDCB9B10D36CE41DAEEEA9DE /* Pods_T_Demo_T_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0D2970F5E88B2EC751718 /* Pods_T_Demo_T_DemoUITests.framework */; };
+		C19643F1BA1048F298A44703 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A38F44B9E9481EBE5B6D84 /* Priority.swift */; };
+		E39092720ED74EF1AE251129 /* AmplifyModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 673506B8F2B845C38AEDB712 /* AmplifyModels.swift */; };
+		E3CFFB0B72064F7AB848C9F0 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */; };
 		EBE3296424B6EA960036D673 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3296324B6EA960036D673 /* AppDelegate.swift */; };
 		EBE3296624B6EA960036D673 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE3296524B6EA960036D673 /* SceneDelegate.swift */; };
 		EBE3296B24B6EA960036D673 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EBE3296924B6EA960036D673 /* Main.storyboard */; };
@@ -24,8 +30,6 @@
 		EBE329A524B6ED7F0036D673 /* TVideoListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE329A424B6ED7F0036D673 /* TVideoListViewController.swift */; };
 		EBE329A724B6ED8D0036D673 /* TVideoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE329A624B6ED8D0036D673 /* TVideoDetailViewController.swift */; };
 		EBE329A924B6F6A40036D673 /* TVideoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EBE329A824B6F6A40036D673 /* TVideoCell.swift */; };
-		E3CFFB0B72064F7AB848C9F0 /* amplifyconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */; };
-		1A9D1FD8837242188D13B93A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 98493D680A95443CAA2AE226 /* awsconfiguration.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,13 +50,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		08A38F44B9E9481EBE5B6D84 /* Priority.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = Priority.swift; path = amplify/generated/models/Priority.swift; sourceTree = "<group>"; };
 		14A0D2970F5E88B2EC751718 /* Pods_T_Demo_T_DemoUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Demo_T_DemoUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		250D17FCD6CC8DAC7F654F1D /* Pods-T-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		41F39BB2151E228BD34E3905 /* Pods_T_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D238D10330A4AC62C46539 /* Pods-T-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		673506B8F2B845C38AEDB712 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
+		6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		72BB54257E7A40AD63CF76CB /* Pods-T-Demo-T-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo-T-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
 		8D596198C7F835A4DD7E0307 /* Pods-T-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo.debug.xcconfig"; path = "Target Support Files/Pods-T-Demo/Pods-T-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		98493D680A95443CAA2AE226 /* awsconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = awsconfiguration.json; sourceTree = "<group>"; };
 		9A7A667F83D64622B17EC171 /* Pods-T-Demo-T-DemoUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo-T-DemoUITests.debug.xcconfig"; path = "Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		9FE3FCBF82CC49B4961B1800 /* amplifytools.xcconfig */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text.xcconfig; path = amplifytools.xcconfig; sourceTree = "<group>"; };
+		A320C886E84B444E9576545B /* TUser+Schema.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = "TUser+Schema.swift"; path = "amplify/generated/models/TUser+Schema.swift"; sourceTree = "<group>"; };
+		B35CCE0079304165B35E7ED2 /* TUser.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = TUser.swift; path = amplify/generated/models/TUser.swift; sourceTree = "<group>"; };
 		B7B2110DD377BD44271243B1 /* Pods-T-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo.release.xcconfig"; path = "Target Support Files/Pods-T-Demo/Pods-T-Demo.release.xcconfig"; sourceTree = "<group>"; };
 		E2AF7D2CFAEB7F4B8238DC80 /* Pods_T_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EBE3296024B6EA960036D673 /* T-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "T-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,10 +86,7 @@
 		EBE329A424B6ED7F0036D673 /* TVideoListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVideoListViewController.swift; sourceTree = "<group>"; };
 		EBE329A624B6ED8D0036D673 /* TVideoDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVideoDetailViewController.swift; sourceTree = "<group>"; };
 		EBE329A824B6F6A40036D673 /* TVideoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVideoCell.swift; sourceTree = "<group>"; };
-		9FE3FCBF82CC49B4961B1800 /* amplifytools.xcconfig */ = {isa = PBXFileReference; name = "amplifytools.xcconfig"; path = "amplifytools.xcconfig"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text.xcconfig; explicitFileType = undefined; includeInIndex = 0; };
-		6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */ = {isa = PBXFileReference; name = "amplifyconfiguration.json"; path = "amplifyconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		98493D680A95443CAA2AE226 /* awsconfiguration.json */ = {isa = PBXFileReference; name = "awsconfiguration.json"; path = "awsconfiguration.json"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
-		EC66661BDDCB47599D4D8DC5 /* schema.graphql */ = {isa = PBXFileReference; name = "schema.graphql"; path = "amplify/backend/api/amplifyDatasource/schema.graphql"; sourceTree = "<group>"; fileEncoding = 4; lastKnownFileType = text; explicitFileType = undefined; includeInIndex = 0; };
+		EC66661BDDCB47599D4D8DC5 /* schema.graphql */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = text; name = schema.graphql; path = amplify/backend/api/amplifyDatasource/schema.graphql; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,9 +130,34 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		30BBA9A821DF41AE8102B067 /* AmplifyConfig */ = {
+			isa = PBXGroup;
+			children = (
+				9FE3FCBF82CC49B4961B1800 /* amplifytools.xcconfig */,
+				6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */,
+				98493D680A95443CAA2AE226 /* awsconfiguration.json */,
+				EC66661BDDCB47599D4D8DC5 /* schema.graphql */,
+			);
+			name = AmplifyConfig;
+			path = .;
+			sourceTree = "<group>";
+		};
+		64E5F63F11D34322B62AA967 /* AmplifyModels */ = {
+			isa = PBXGroup;
+			children = (
+				673506B8F2B845C38AEDB712 /* AmplifyModels.swift */,
+				08A38F44B9E9481EBE5B6D84 /* Priority.swift */,
+				B35CCE0079304165B35E7ED2 /* TUser.swift */,
+				A320C886E84B444E9576545B /* TUser+Schema.swift */,
+			);
+			name = AmplifyModels;
+			path = .;
+			sourceTree = "<group>";
+		};
 		EBE3295724B6EA960036D673 = {
 			isa = PBXGroup;
 			children = (
+				64E5F63F11D34322B62AA967 /* AmplifyModels */,
 				30BBA9A821DF41AE8102B067 /* AmplifyConfig */,
 				EBE3296224B6EA960036D673 /* T-Demo */,
 				EBE3297924B6EA990036D673 /* T-DemoTests */,
@@ -263,26 +296,6 @@
 				41F39BB2151E228BD34E3905 /* Pods_T_DemoTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		30BBA9A821DF41AE8102B067 /* AmplifyConfig */ = {
-			isa = PBXGroup;
-			children = (
-				9FE3FCBF82CC49B4961B1800 /* amplifytools.xcconfig */,
-				6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */,
-				98493D680A95443CAA2AE226 /* awsconfiguration.json */,
-				EC66661BDDCB47599D4D8DC5 /* schema.graphql */,
-			);
-			name = AmplifyConfig;
-			path = .;
-			sourceTree = "<group>";
-		};
-		F00A10DC87ED41218DC0977C /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = Resources;
-			path = undefined;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -457,7 +470,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/AmplifyTools/amplify-tools.sh\"\n";
+			shellScript = "export AWS_PROFILE=tDemo\n\"${PODS_ROOT}/AmplifyTools/amplify-tools.sh\"\n";
 		};
 		5710DB607F8DA50ECE979E70 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -553,6 +566,10 @@
 				EBE3299D24B6ECB60036D673 /* TBaseViewController.swift in Sources */,
 				EBE3296624B6EA960036D673 /* SceneDelegate.swift in Sources */,
 				EBE329A524B6ED7F0036D673 /* TVideoListViewController.swift in Sources */,
+				E39092720ED74EF1AE251129 /* AmplifyModels.swift in Sources */,
+				C19643F1BA1048F298A44703 /* Priority.swift in Sources */,
+				84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */,
+				3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

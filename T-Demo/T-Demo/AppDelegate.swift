@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Amplify
+import AmplifyPlugins
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,7 +17,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        initAmplifySDK()
         return true
+    }
+    
+    // MARK: AWS SDK
+    func initAmplifySDK() {
+        let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
+        do {
+           try Amplify.add(plugin:dataStorePlugin)
+           try Amplify.configure()
+           print("Initialized Amplify successfully.");
+           //Amplify.Logging.logLevel = .info
+        } catch {
+           print("Could not initialize Amplify: \(error)")
+        }
     }
 
     // MARK: UISceneSession Lifecycle

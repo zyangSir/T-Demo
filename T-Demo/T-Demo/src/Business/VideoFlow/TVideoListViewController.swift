@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Amplify
+import AmplifyPlugins
 
 class TVideoListViewController: TBaseViewController {
 
@@ -16,6 +18,21 @@ class TVideoListViewController: TBaseViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        runAmplifyTest()
+    }
+    
+    func runAmplifyTest() {
+        let item = TUser(nickName: "Tom", account: "momo", priority: .high, description: "This is a test")
+        
+        Amplify.DataStore.save(item) { (result) in
+            switch(result) {
+            case .success(let savedItem):
+                print("Saved item: \(savedItem.account)")
+                
+            case .failure(let err):
+                print("Could not save item to datastore: \(err)")
+            }
+        }
     }
     
 
