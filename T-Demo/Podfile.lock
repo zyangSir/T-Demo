@@ -36,6 +36,13 @@ PODS:
     - SQLite.swift/standard (= 0.12.2)
   - SQLite.swift/standard (0.12.2)
   - Starscream (3.0.6)
+  - YYCache (1.0.4)
+  - YYImage (1.0.4):
+    - YYImage/Core (= 1.0.4)
+  - YYImage/Core (1.0.4)
+  - YYWebImage (1.0.5):
+    - YYCache
+    - YYImage
 
 DEPENDENCIES:
   - Amplify
@@ -43,6 +50,7 @@ DEPENDENCIES:
   - AmplifyPlugins/AWSAPIPlugin
   - AmplifyPlugins/AWSDataStorePlugin
   - JPVideoPlayer (~> 3.2.0-beta)
+  - YYWebImage (~> 1.0.5)
 
 SPEC REPOS:
   trunk:
@@ -59,6 +67,9 @@ SPEC REPOS:
     - ReachabilitySwift
     - SQLite.swift
     - Starscream
+    - YYCache
+    - YYImage
+    - YYWebImage
 
 SPEC CHECKSUMS:
   Amplify: 7626e435f3e78ac3508252557e375f994d5d5154
@@ -74,7 +85,10 @@ SPEC CHECKSUMS:
   ReachabilitySwift: 985039c6f7b23a1da463388634119492ff86c825
   SQLite.swift: d2b4642190917051ce6bd1d49aab565fe794eea3
   Starscream: ef3ece99d765eeccb67de105bfa143f929026cf5
+  YYCache: 8105b6638f5e849296c71f331ff83891a4942952
+  YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
+  YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 767edeaee2d6eb1b6a4b762b0eeac9cefe47507c
+PODFILE CHECKSUM: 4ee3264787f2ccea3b8df4c0eae7fff4065d5783
 
 COCOAPODS: 1.9.3

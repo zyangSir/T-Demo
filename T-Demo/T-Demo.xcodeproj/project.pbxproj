@@ -11,6 +11,8 @@
 		1A9D1FD8837242188D13B93A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 98493D680A95443CAA2AE226 /* awsconfiguration.json */; };
 		242D7C43FEEC00812C63C5AC /* Pods_T_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF7D2CFAEB7F4B8238DC80 /* Pods_T_Demo.framework */; };
 		3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = A320C886E84B444E9576545B /* TUser+Schema.swift */; };
+		5622DEF524BC518200E8BD92 /* TVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622DEF424BC518200E8BD92 /* TVideoInfo.swift */; };
+		5622DEF824BDA26A00E8BD92 /* hls1.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */; };
 		84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCE0079304165B35E7ED2 /* TUser.swift */; };
 		BDCB9B10D36CE41DAEEEA9DE /* Pods_T_Demo_T_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0D2970F5E88B2EC751718 /* Pods_T_Demo_T_DemoUITests.framework */; };
 		C19643F1BA1048F298A44703 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A38F44B9E9481EBE5B6D84 /* Priority.swift */; };
@@ -55,6 +57,8 @@
 		250D17FCD6CC8DAC7F654F1D /* Pods-T-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		41F39BB2151E228BD34E3905 /* Pods_T_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D238D10330A4AC62C46539 /* Pods-T-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5622DEF424BC518200E8BD92 /* TVideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVideoInfo.swift; sourceTree = "<group>"; };
+		5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hls1.m3u8; sourceTree = "<group>"; };
 		673506B8F2B845C38AEDB712 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		72BB54257E7A40AD63CF76CB /* Pods-T-Demo-T-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo-T-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -142,6 +146,23 @@
 			path = .;
 			sourceTree = "<group>";
 		};
+		5622DEF324BC513100E8BD92 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5622DEF424BC518200E8BD92 /* TVideoInfo.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5622DEF624BDA26A00E8BD92 /* res */ = {
+			isa = PBXGroup;
+			children = (
+				5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */,
+			);
+			name = res;
+			path = "T-Demo/res";
+			sourceTree = SOURCE_ROOT;
+		};
 		64E5F63F11D34322B62AA967 /* AmplifyModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -213,6 +234,7 @@
 		EBE3299324B6EBD10036D673 /* src */ = {
 			isa = PBXGroup;
 			children = (
+				5622DEF624BDA26A00E8BD92 /* res */,
 				EBE3299424B6EC1B0036D673 /* Business */,
 				EBE3299724B6EC1B0036D673 /* Common */,
 			);
@@ -231,6 +253,7 @@
 		EBE3299524B6EC1B0036D673 /* VideoFlow */ = {
 			isa = PBXGroup;
 			children = (
+				5622DEF324BC513100E8BD92 /* Model */,
 				EBE329A424B6ED7F0036D673 /* TVideoListViewController.swift */,
 				EBE329A624B6ED8D0036D673 /* TVideoDetailViewController.swift */,
 				EBE329A824B6F6A40036D673 /* TVideoCell.swift */,
@@ -412,6 +435,7 @@
 				EBE3296D24B6EA990036D673 /* Assets.xcassets in Resources */,
 				EBE3296B24B6EA960036D673 /* Main.storyboard in Resources */,
 				E3CFFB0B72064F7AB848C9F0 /* amplifyconfiguration.json in Resources */,
+				5622DEF824BDA26A00E8BD92 /* hls1.m3u8 in Resources */,
 				1A9D1FD8837242188D13B93A /* awsconfiguration.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -569,6 +593,7 @@
 				E39092720ED74EF1AE251129 /* AmplifyModels.swift in Sources */,
 				C19643F1BA1048F298A44703 /* Priority.swift in Sources */,
 				84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */,
+				5622DEF524BC518200E8BD92 /* TVideoInfo.swift in Sources */,
 				3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

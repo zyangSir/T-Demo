@@ -13,6 +13,9 @@ target 'T-Demo' do
   pod 'Amplify/Tools'
   pod 'AmplifyPlugins/AWSAPIPlugin'
   pod 'AmplifyPlugins/AWSDataStorePlugin'
+  
+  pod 'YYWebImage', '~> 1.0.5'
+  pod "mobile-ffmpeg-full"
 
 
   target 'T-DemoTests' do

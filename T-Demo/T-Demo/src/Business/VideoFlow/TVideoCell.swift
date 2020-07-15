@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import YYWebImage
 
+let TVideoCellID = "TVideoCell"
 class TVideoCell: UITableViewCell {
+    
+    @IBOutlet weak var dispView: UIImageView!
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +23,14 @@ class TVideoCell: UITableViewCell {
         super.setSelected(selected, animated: animated)
 
         // Configure the view for the selected state
+    }
+    
+    func applyData(videoData: TVideoInfo!) {
+        //这里要用异步缓存方式加载preview image
+        dispView.yy_setImage(with: videoData.albumURL!, options: .progressiveBlur)
+    
+        //config video url
+        
     }
 
 }
