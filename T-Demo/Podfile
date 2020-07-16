@@ -8,14 +8,20 @@ target 'T-Demo' do
   # Pods for T-Demo
   pod 'JPVideoPlayer', '~> 3.2.0-beta'
 
-
+  # AWS 相关
   pod 'Amplify'
   pod 'Amplify/Tools'
   pod 'AmplifyPlugins/AWSAPIPlugin'
   pod 'AmplifyPlugins/AWSDataStorePlugin'
   
+  # FB 相关
+  pod 'FBSDKLoginKit'
+  
   pod 'YYWebImage', '~> 1.0.5'
+  
+  #ts 转 mp4
   pod "mobile-ffmpeg-full"
+  pod 'SVProgressHUD', '~> 2.2.5'
 
 
   target 'T-DemoTests' do

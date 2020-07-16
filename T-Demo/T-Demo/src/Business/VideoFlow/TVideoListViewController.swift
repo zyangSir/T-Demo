@@ -9,6 +9,7 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
+import SVProgressHUD
 
 let PREVIEW_ALBUM_IMG_PATH = "https://s3-ap-southeast-2.amazonaws.com/maji-dev-buckets/images/DDC9C6DF-6986-4772-BA96-27F6EFB8CD94.png"
 
@@ -24,6 +25,9 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         // Do any additional setup after loading the view.
         //runAmplifyTest()
         
+        //弹出登录
+        
+        SVProgressHUD.show(withStatus: "加载视频列表")
         DispatchQueue.global(qos: .background).async {
             self.loadVideoAssets()
         }
@@ -93,13 +97,13 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         
         //MP4 视频地址
         let mp4Path = "https://s3-ap-southeast-2.amazonaws.com/maji-dev-buckets/videos/8A2E394C-008F-48C4-9EBD-47D16BA54E5C.mp4"
-        //let mp4Path = "https://d3ngi64t7aakaf.cloudfront.net/ecea0248-72c2-4c26-a0d7-fa45fefb4653/hls/8A2E394C-008F-48C4-9EBD-47D16BA54E5C_Ott_Hls_Ts_Avc_Aac_16x9_270x480p_15Hz_0.4Mbps_qvbr_00001.ts"
         
         let mp4Res = TVideoInfo(albumPath: PREVIEW_ALBUM_IMG_PATH, streamPath: urlPathEncode(urlPath: mp4Path)!)
         
         videoAssetArr.append(mp4Res)
         
         DispatchQueue.main.async {
+            SVProgressHUD.dismiss()
             self.tableView.reloadData()
         }
     }

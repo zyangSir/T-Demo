@@ -13,6 +13,8 @@
 		3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = A320C886E84B444E9576545B /* TUser+Schema.swift */; };
 		5622DEF524BC518200E8BD92 /* TVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622DEF424BC518200E8BD92 /* TVideoInfo.swift */; };
 		5622DEF824BDA26A00E8BD92 /* hls1.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */; };
+		5656069424C02CE500B0A1C7 /* ZSFilePather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5656069224C02CE500B0A1C7 /* ZSFilePather.m */; };
+		5656069824C02D2200B0A1C7 /* ZSExtendedLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5656069624C02D2200B0A1C7 /* ZSExtendedLog.m */; };
 		84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCE0079304165B35E7ED2 /* TUser.swift */; };
 		BDCB9B10D36CE41DAEEEA9DE /* Pods_T_Demo_T_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0D2970F5E88B2EC751718 /* Pods_T_Demo_T_DemoUITests.framework */; };
 		C19643F1BA1048F298A44703 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A38F44B9E9481EBE5B6D84 /* Priority.swift */; };
@@ -59,6 +61,11 @@
 		55D238D10330A4AC62C46539 /* Pods-T-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5622DEF424BC518200E8BD92 /* TVideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVideoInfo.swift; sourceTree = "<group>"; };
 		5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hls1.m3u8; sourceTree = "<group>"; };
+		5656069224C02CE500B0A1C7 /* ZSFilePather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSFilePather.m; sourceTree = "<group>"; };
+		5656069324C02CE500B0A1C7 /* ZSFilePather.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSFilePather.h; sourceTree = "<group>"; };
+		5656069624C02D2200B0A1C7 /* ZSExtendedLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSExtendedLog.m; sourceTree = "<group>"; };
+		5656069724C02D2200B0A1C7 /* ZSExtendedLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSExtendedLog.h; sourceTree = "<group>"; };
+		5656069E24C0322C00B0A1C7 /* T-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		673506B8F2B845C38AEDB712 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		72BB54257E7A40AD63CF76CB /* Pods-T-Demo-T-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo-T-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -161,6 +168,43 @@
 			);
 			name = res;
 			path = "T-Demo/res";
+			sourceTree = SOURCE_ROOT;
+		};
+		5656069024C02CE500B0A1C7 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5656069C24C02F6A00B0A1C7 /* Bridge */,
+				5656069524C02D2200B0A1C7 /* Log */,
+				5656069124C02CE500B0A1C7 /* FilePath */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		5656069124C02CE500B0A1C7 /* FilePath */ = {
+			isa = PBXGroup;
+			children = (
+				5656069224C02CE500B0A1C7 /* ZSFilePather.m */,
+				5656069324C02CE500B0A1C7 /* ZSFilePather.h */,
+			);
+			path = FilePath;
+			sourceTree = "<group>";
+		};
+		5656069524C02D2200B0A1C7 /* Log */ = {
+			isa = PBXGroup;
+			children = (
+				5656069624C02D2200B0A1C7 /* ZSExtendedLog.m */,
+				5656069724C02D2200B0A1C7 /* ZSExtendedLog.h */,
+			);
+			path = Log;
+			sourceTree = "<group>";
+		};
+		5656069C24C02F6A00B0A1C7 /* Bridge */ = {
+			isa = PBXGroup;
+			children = (
+				5656069E24C0322C00B0A1C7 /* T-Demo-Bridging-Header.h */,
+			);
+			name = Bridge;
+			path = "T-Demo/src/Common/Bridge";
 			sourceTree = SOURCE_ROOT;
 		};
 		64E5F63F11D34322B62AA967 /* AmplifyModels */ = {
@@ -272,6 +316,7 @@
 		EBE3299724B6EC1B0036D673 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				5656069024C02CE500B0A1C7 /* Util */,
 				EBE3299824B6EC830036D673 /* Base */,
 			);
 			path = Common;
@@ -329,6 +374,7 @@
 			buildConfigurationList = EBE3298A24B6EA990036D673 /* Build configuration list for PBXNativeTarget "T-Demo" */;
 			buildPhases = (
 				5710DB607F8DA50ECE979E70 /* [CP] Check Pods Manifest.lock */,
+				AC0005F9486F10793262AC7B /* [CP] Prepare Artifacts */,
 				EBE3295C24B6EA960036D673 /* Sources */,
 				EBE3295D24B6EA960036D673 /* Frameworks */,
 				EBE3295E24B6EA960036D673 /* Resources */,
@@ -368,6 +414,7 @@
 			buildConfigurationList = EBE3299024B6EA990036D673 /* Build configuration list for PBXNativeTarget "T-DemoUITests" */;
 			buildPhases = (
 				70895614CC5E0C969B15C1AC /* [CP] Check Pods Manifest.lock */,
+				6A06AF9219ADBA998AF8F825 /* [CP] Prepare Artifacts */,
 				EBE3297D24B6EA990036D673 /* Sources */,
 				EBE3297E24B6EA990036D673 /* Frameworks */,
 				EBE3297F24B6EA990036D673 /* Resources */,
@@ -518,6 +565,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		6A06AF9219ADBA998AF8F825 /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests-artifacts.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		70895614CC5E0C969B15C1AC /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -538,6 +602,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AC0005F9486F10793262AC7B /* [CP] Prepare Artifacts */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Demo/Pods-T-Demo-artifacts-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Prepare Artifacts";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-T-Demo/Pods-T-Demo-artifacts-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-T-Demo/Pods-T-Demo-artifacts.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		BC22EEC66C6985FFEB62C25D /* [CP] Embed Pods Frameworks */ = {
@@ -583,6 +664,7 @@
 			files = (
 				EBE329A324B6ED5D0036D673 /* TLoginViewController.swift in Sources */,
 				EBE329A724B6ED8D0036D673 /* TVideoDetailViewController.swift in Sources */,
+				5656069424C02CE500B0A1C7 /* ZSFilePather.m in Sources */,
 				EBE329A924B6F6A40036D673 /* TVideoCell.swift in Sources */,
 				EBE3296424B6EA960036D673 /* AppDelegate.swift in Sources */,
 				EBE329A124B6ECEA0036D673 /* TBaseView.swift in Sources */,
@@ -590,6 +672,7 @@
 				EBE3299D24B6ECB60036D673 /* TBaseViewController.swift in Sources */,
 				EBE3296624B6EA960036D673 /* SceneDelegate.swift in Sources */,
 				EBE329A524B6ED7F0036D673 /* TVideoListViewController.swift in Sources */,
+				5656069824C02D2200B0A1C7 /* ZSExtendedLog.m in Sources */,
 				E39092720ED74EF1AE251129 /* AmplifyModels.swift in Sources */,
 				C19643F1BA1048F298A44703 /* Priority.swift in Sources */,
 				84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */,
@@ -778,6 +861,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.beitiansoftware.T-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yangtsing/Desktop/openSrc/T-Demo/T-Demo/T-Demo/src/Common/Bridge/T-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -798,6 +882,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.beitiansoftware.T-Demo";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "/Users/yangtsing/Desktop/openSrc/T-Demo/T-Demo/T-Demo/src/Common/Bridge/T-Demo-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
