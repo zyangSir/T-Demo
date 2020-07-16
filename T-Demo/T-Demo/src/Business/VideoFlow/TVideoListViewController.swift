@@ -27,7 +27,7 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         
         //弹出登录
         
-        SVProgressHUD.show(withStatus: "加载视频列表")
+        SVProgressHUD.show(withStatus: "精彩马上开始")
         DispatchQueue.global(qos: .background).async {
             self.loadVideoAssets()
         }
@@ -72,6 +72,7 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         
         let strArr = m3u8Str!.components(separatedBy: "\n")
         // parse m3u8 video segments, into xxx.ts link url
+        var priviousLine:String?
         for line in strArr {
             if line.hasSuffix(".m3u8") {
                 let m3u8FilePath = hlsUrlDomain + line
@@ -83,7 +84,8 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
                     for tsFileName in tsFilePathArr {
                         let tsFilePath = hlsUrlDomain + tsFileName
                         let m3u8Res = TVideoInfo(albumPath: PREVIEW_ALBUM_IMG_PATH, streamPath: tsFilePath)
-                        
+                        m3u8Res.srcType = "HLS"
+                        parseOutExtInfo(m3u8Info: priviousLine!, videoInfo: m3u8Res)
                         videoAssetArr.append(m3u8Res)
                     }
                     
@@ -93,13 +95,16 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
                 }
                 
             }
+            priviousLine = line
         }
         
         //MP4 视频地址
         let mp4Path = "https://s3-ap-southeast-2.amazonaws.com/maji-dev-buckets/videos/8A2E394C-008F-48C4-9EBD-47D16BA54E5C.mp4"
         
         let mp4Res = TVideoInfo(albumPath: PREVIEW_ALBUM_IMG_PATH, streamPath: urlPathEncode(urlPath: mp4Path)!)
-        
+        mp4Res.resolution = CGSize(width: 1080, height: 1920)
+        mp4Res.frameRate = 30
+        mp4Res.srcType = "MP4"
         videoAssetArr.append(mp4Res)
         
         DispatchQueue.main.async {
@@ -126,6 +131,23 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         return urlPath?.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)
     }
     
+    func parseOutExtInfo(m3u8Info: String, videoInfo: TVideoInfo){
+        
+        let infoArr = m3u8Info.components(separatedBy: ",")
+        for info in infoArr {
+            if info.hasPrefix("RESOLUTION") {
+                let resolution = info.components(separatedBy: "=").last
+                let w = (resolution?.components(separatedBy: "x").first ?? "0") as String
+                let h = (resolution?.components(separatedBy: "x").last ?? "0") as String
+                videoInfo.resolution = CGSize(width: CGFloat(Double(w)!), height: CGFloat(Double(h)!))
+            }else if info.hasPrefix("FRAME-RATE") {
+                let frameRate = (info.components(separatedBy: "=").last ?? "0") as String
+                videoInfo.frameRate = CGFloat(Double(frameRate)!)
+            }
+        }
+        
+    }
+    
     // MARK: - Table data source & delegate
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: TVideoCellID, for: indexPath) as! TVideoCell
@@ -141,6 +163,10 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return videoAssetArr.count
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 
     

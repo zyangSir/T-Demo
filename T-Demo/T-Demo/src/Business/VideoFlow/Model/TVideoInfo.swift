@@ -12,6 +12,8 @@ class TVideoInfo: NSObject {
     var albumURL: URL?
     var streamURL: URL?
     var resolution: CGSize? // 清晰度
+    var frameRate: CGFloat? // 帧率
+    var srcType: String? //源类型 hls or mp4
     
     init(albumPath: String?, streamPath: String) {
         

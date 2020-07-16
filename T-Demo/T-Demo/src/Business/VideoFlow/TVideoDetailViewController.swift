@@ -21,9 +21,11 @@ class TVideoDetailViewController: TBaseViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         dispView.yy_setImage(with: videoInfo?.albumURL, options: .progressiveBlur)
+        
+        self.title = videoInfo?.srcType
         
         if (videoInfo?.streamURL?.absoluteString.hasSuffix(".ts"))! {
             //ts文件需要先下载到本地，转码成MP4
@@ -43,6 +45,7 @@ class TVideoDetailViewController: TBaseViewController {
         super.viewDidDisappear(animated)
         // stop play video
         self.dispView.jp_stopPlay()
+        SVProgressHUD.dismiss()
     }
     
     // MARK: - Ctrl
@@ -80,7 +83,7 @@ class TVideoDetailViewController: TBaseViewController {
             //开始转码, 转个Loading圈
             let tsFileName = String(tsUrlPath[stIndex..<edIndex]) + ".ts"
             let tsFilePath = ZSFilePather.commonCacheDirPath() + "/" + tsFileName
-            SVProgressHUD.show(withStatus: "加载视频")
+            SVProgressHUD.show(withStatus: "好戏马上开始")
             
             //此处涉及数据下载，视频格式转换，因此要放到子线程
             DispatchQueue.global(qos: .userInitiated).async {

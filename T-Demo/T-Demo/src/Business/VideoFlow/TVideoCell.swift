@@ -12,6 +12,8 @@ import YYWebImage
 let TVideoCellID = "TVideoCell"
 class TVideoCell: UITableViewCell {
     
+    @IBOutlet weak var resolutionLabel: UILabel!
+    @IBOutlet weak var frameRateLabel: UILabel!
     @IBOutlet weak var dispView: UIImageView!
 
     override func awakeFromNib() {
@@ -28,8 +30,11 @@ class TVideoCell: UITableViewCell {
     func applyData(videoData: TVideoInfo!) {
         //这里要用异步缓存方式加载preview image
         dispView.yy_setImage(with: videoData.albumURL!, options: .progressiveBlur)
-    
-        //config video url
+        
+        let width = "\(videoData.resolution?.width ?? 0)"
+        let height = "\(videoData.resolution?.height ?? 0)"
+        resolutionLabel.text = "清晰度: \(width)x\(height)"
+        frameRateLabel.text = "帧率: \(videoData.frameRate ?? 0)"
         
     }
 
