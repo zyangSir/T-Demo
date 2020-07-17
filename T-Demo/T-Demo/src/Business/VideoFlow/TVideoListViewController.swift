@@ -27,7 +27,7 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
 
         // Do any additional setup after loading the view.
         //runAmplifyTest()
-        
+        self.title = "DevHub Demo"
         logoutBtn.layer.cornerRadius = logoutBtn.bounds.width/2
         //弹出登录
         

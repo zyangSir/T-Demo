@@ -9,6 +9,7 @@
 import UIKit
 import Amplify
 import AmplifyPlugins
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,6 +24,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if #available(iOS 13.0, *) {
             
         }else{
+            //For Facebook SSO
+            ApplicationDelegate.shared.application(application, didFinishLaunchingWithOptions: launchOptions)
+            
             window = UIWindow(frame: UIScreen.main.bounds)
             window?.makeKeyAndVisible()
             window?.rootViewController = UIStoryboard.init(name: "Main", bundle: nil).instantiateInitialViewController()
@@ -30,6 +34,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
+        //For Facebook SSO
+        ApplicationDelegate.shared.application(app, open: url, sourceApplication:  options[UIApplication.OpenURLOptionsKey.sourceApplication] as? String, annotation:  options[UIApplication.OpenURLOptionsKey.annotation])
+    }
+        
     
     // MARK: AWS SDK
     func initAmplifySDK() {
