@@ -15,6 +15,8 @@
 		5622DEF824BDA26A00E8BD92 /* hls1.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */; };
 		5656069424C02CE500B0A1C7 /* ZSFilePather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5656069224C02CE500B0A1C7 /* ZSFilePather.m */; };
 		5656069824C02D2200B0A1C7 /* ZSExtendedLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5656069624C02D2200B0A1C7 /* ZSExtendedLog.m */; };
+		56AFFCA224C14CA800C2973D /* TDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFCA124C14CA800C2973D /* TDUser.swift */; };
+		56AFFCA424C14F5D00C2973D /* TDUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFCA324C14F5D00C2973D /* TDUserManager.swift */; };
 		84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCE0079304165B35E7ED2 /* TUser.swift */; };
 		BDCB9B10D36CE41DAEEEA9DE /* Pods_T_Demo_T_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0D2970F5E88B2EC751718 /* Pods_T_Demo_T_DemoUITests.framework */; };
 		C19643F1BA1048F298A44703 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A38F44B9E9481EBE5B6D84 /* Priority.swift */; };
@@ -66,6 +68,8 @@
 		5656069624C02D2200B0A1C7 /* ZSExtendedLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSExtendedLog.m; sourceTree = "<group>"; };
 		5656069724C02D2200B0A1C7 /* ZSExtendedLog.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZSExtendedLog.h; sourceTree = "<group>"; };
 		5656069E24C0322C00B0A1C7 /* T-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
+		56AFFCA124C14CA800C2973D /* TDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDUser.swift; sourceTree = "<group>"; };
+		56AFFCA324C14F5D00C2973D /* TDUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDUserManager.swift; sourceTree = "<group>"; };
 		673506B8F2B845C38AEDB712 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		72BB54257E7A40AD63CF76CB /* Pods-T-Demo-T-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo-T-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -207,6 +211,23 @@
 			path = "T-Demo/src/Common/Bridge";
 			sourceTree = SOURCE_ROOT;
 		};
+		56AFFC9F24C14BDD00C2973D /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				56AFFCA324C14F5D00C2973D /* TDUserManager.swift */,
+			);
+			name = Manager;
+			path = "T-Demo/src/Manager";
+			sourceTree = SOURCE_ROOT;
+		};
+		56AFFCA024C14C3300C2973D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				56AFFCA124C14CA800C2973D /* TDUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		64E5F63F11D34322B62AA967 /* AmplifyModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +267,7 @@
 		EBE3296224B6EA960036D673 /* T-Demo */ = {
 			isa = PBXGroup;
 			children = (
+				5622DEF624BDA26A00E8BD92 /* res */,
 				EBE3299324B6EBD10036D673 /* src */,
 				EBE3296324B6EA960036D673 /* AppDelegate.swift */,
 				EBE3296524B6EA960036D673 /* SceneDelegate.swift */,
@@ -278,7 +300,6 @@
 		EBE3299324B6EBD10036D673 /* src */ = {
 			isa = PBXGroup;
 			children = (
-				5622DEF624BDA26A00E8BD92 /* res */,
 				EBE3299424B6EC1B0036D673 /* Business */,
 				EBE3299724B6EC1B0036D673 /* Common */,
 			);
@@ -308,6 +329,7 @@
 		EBE3299624B6EC1B0036D673 /* Login */ = {
 			isa = PBXGroup;
 			children = (
+				56AFFCA024C14C3300C2973D /* Model */,
 				EBE329A224B6ED5D0036D673 /* TLoginViewController.swift */,
 			);
 			path = Login;
@@ -316,6 +338,7 @@
 		EBE3299724B6EC1B0036D673 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				56AFFC9F24C14BDD00C2973D /* Manager */,
 				5656069024C02CE500B0A1C7 /* Util */,
 				EBE3299824B6EC830036D673 /* Base */,
 			);
@@ -673,6 +696,8 @@
 				EBE3296624B6EA960036D673 /* SceneDelegate.swift in Sources */,
 				EBE329A524B6ED7F0036D673 /* TVideoListViewController.swift in Sources */,
 				5656069824C02D2200B0A1C7 /* ZSExtendedLog.m in Sources */,
+				56AFFCA224C14CA800C2973D /* TDUser.swift in Sources */,
+				56AFFCA424C14F5D00C2973D /* TDUserManager.swift in Sources */,
 				E39092720ED74EF1AE251129 /* AmplifyModels.swift in Sources */,
 				C19643F1BA1048F298A44703 /* Priority.swift in Sources */,
 				84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */,

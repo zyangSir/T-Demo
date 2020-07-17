@@ -17,6 +17,9 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
 
     @IBOutlet weak var tableView: UITableView!
     
+    @IBOutlet weak var logoutBtn: UIButton!
+    
+    
     var videoAssetArr = [TVideoInfo]()
     
     override func viewDidLoad() {
@@ -25,6 +28,7 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         // Do any additional setup after loading the view.
         //runAmplifyTest()
         
+        logoutBtn.layer.cornerRadius = logoutBtn.bounds.width/2
         //弹出登录
         
         SVProgressHUD.show(withStatus: "精彩马上开始")
@@ -46,6 +50,13 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
             }
         }
     }
+    
+    // MARK: - Action
+    @IBAction func logoutBtnClicked(_ sender: Any) {
+        
+        
+    }
+    
     
     // MARK: - Data load & parse
     func loadVideoAssets() {

@@ -9,6 +9,7 @@ type TUser @model {
   nickName: String
   account: String!
   signature: String
+  token: String
   email: String
   priority: Priority
   description: String
