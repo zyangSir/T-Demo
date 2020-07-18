@@ -28,14 +28,31 @@ class TDUserManager: NSObject {
         done(false, nil, "请重新登录")
     }
     
-    func login(acc: String!, psw: String!, type: TDAccounType, done: loginDoneBlock) {
+    func login(acc: String!, psw: String!, type: TDAccounType, done: @escaping loginDoneBlock) {
         user = TDUser()
         user?.accType = type;
         
         if type == .ACC_TYPE_AWS {
             //AWS登录
+            
+            
         }else if type == .ACC_TYPE_FACEBOOK {
             //FACEBOOK登录
+            let nowVC = UIApplication.shared.keyWindow?.rootViewController!
+            
+            fbLoginManager.logIn(permissions: ["public_profile"], from: nowVC) { (result, err) in
+                if result?.token != nil {
+                    self.user?.fbToken = result?.token
+                    //登录成功了
+                    done(true, nil, "登录成功")
+                }else if result?.isCancelled ?? false {
+                    //取消了登录
+                    done(false, nil, "取消了登录")
+                }else {
+                    //登录失败
+                    done(false, nil, "登录失败")
+                }
+            }
         }
     }
     

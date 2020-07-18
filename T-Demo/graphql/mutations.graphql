@@ -8,6 +8,7 @@ mutation CreateTUser(
     nickName
     account
     signature
+    token
     email
     priority
     description
@@ -27,6 +28,7 @@ mutation UpdateTUser(
     nickName
     account
     signature
+    token
     email
     priority
     description
@@ -46,6 +48,7 @@ mutation DeleteTUser(
     nickName
     account
     signature
+    token
     email
     priority
     description

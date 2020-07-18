@@ -34,22 +34,28 @@ class TLoginViewController: TBaseViewController {
     
     // 普通AWS 登录
     @IBAction func loginBtnClick(_ sender: Any) {
+        let userManager = TDUserManager.sharedInstance
+        userManager.login(acc: nil, psw: nil, type: .ACC_TYPE_AWS) { (success, err, msg) in
+            if success == true {
+                //登录成功了
+                self.postLoginSuccNotification()
+                self.dismiss(animated: true, completion: nil)
+            }else {
+                SVProgressHUD.showError(withStatus: msg)
+            }
+        }
     }
     
     // FB 登录
     @IBAction func fbLoginBtnClicked(_ sender: Any) {
         let userManager = TDUserManager.sharedInstance
-        userManager.fbLoginManager.logIn(permissions: ["public_profile"], from: self) { (result, err) in
-            if result?.token != nil {
+        userManager.login(acc: nil, psw: nil, type: .ACC_TYPE_FACEBOOK) { (success, err, msg) in
+            if success == true {
                 //登录成功了
                 self.postLoginSuccNotification()
                 self.dismiss(animated: true, completion: nil)
-            }else if result?.isCancelled ?? false {
-                //取消了登录
-                SVProgressHUD.showError(withStatus: "取消了登录")
             }else {
-                //登录失败
-                SVProgressHUD.showError(withStatus: "登录失败")
+                SVProgressHUD.showError(withStatus: msg)
             }
         }
     }

@@ -16,6 +16,7 @@ query SyncTUsers(
       nickName
       account
       signature
+      token
       email
       priority
       description
@@ -35,6 +36,7 @@ query GetTUser($id: ID!) {
     nickName
     account
     signature
+    token
     email
     priority
     description
@@ -56,6 +58,7 @@ query ListTUsers(
       nickName
       account
       signature
+      token
       email
       priority
       description

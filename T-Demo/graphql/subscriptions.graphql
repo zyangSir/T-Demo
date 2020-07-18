@@ -5,6 +5,7 @@ subscription OnCreateTUser {
     nickName
     account
     signature
+    token
     email
     priority
     description
@@ -21,6 +22,7 @@ subscription OnUpdateTUser {
     nickName
     account
     signature
+    token
     email
     priority
     description
@@ -37,6 +39,7 @@ subscription OnDeleteTUser {
     nickName
     account
     signature
+    token
     email
     priority
     description

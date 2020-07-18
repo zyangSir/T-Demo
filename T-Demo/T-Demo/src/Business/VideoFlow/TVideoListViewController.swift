@@ -74,6 +74,8 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         
         alertVC.addAction(sureAction)
         alertVC.addAction(cancleAction)
+        
+        self.present(alertVC, animated: true, completion: nil)
     }
     
     // MARK: - Notification
@@ -99,7 +101,7 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
     }
     
     @objc func onLogoutSuccess() {
-        DispatchQueue.global(qos: .background).async {
+        DispatchQueue.main.async {
             self.showLoginPage()
         }
     }

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKCoreKit
 
 enum TDAccounType {
     case ACC_TYPE_AWS
@@ -17,6 +18,7 @@ class TDUser: NSObject {
     var info: TUser?
     ///默认是AWS登录
     var accType: TDAccounType = .ACC_TYPE_AWS
-    
+    var fbToken: AccessToken?
+
     
 }
