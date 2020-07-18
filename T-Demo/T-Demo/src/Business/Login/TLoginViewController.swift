@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import FBSDKLoginKit
+import SVProgressHUD
 
 class TLoginViewController: TBaseViewController {
     
@@ -16,7 +18,6 @@ class TLoginViewController: TBaseViewController {
     @IBOutlet weak var pswTextField: UITextField!
     
     @IBOutlet weak var registeBtn: UIButton!
-    
     
     
     override func viewDidLoad() {
@@ -37,7 +38,20 @@ class TLoginViewController: TBaseViewController {
     
     // FB 登录
     @IBAction func fbLoginBtnClicked(_ sender: Any) {
-        
+        let userManager = TDUserManager.sharedInstance
+        userManager.fbLoginManager.logIn(permissions: ["public_profile"], from: self) { (result, err) in
+            if result?.token != nil {
+                //登录成功了
+                self.postLoginSuccNotification()
+                self.dismiss(animated: true, completion: nil)
+            }else if result?.isCancelled ?? false {
+                //取消了登录
+                SVProgressHUD.showError(withStatus: "取消了登录")
+            }else {
+                //登录失败
+                SVProgressHUD.showError(withStatus: "登录失败")
+            }
+        }
     }
     
     // MARK: - Notification

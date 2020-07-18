@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import FBSDKLoginKit
 
 let TD_LOGIN_SUCC_NOTIFICATION = NSNotification.Name(rawValue: "TD_LOGIN_SUCC")
 
@@ -15,6 +16,9 @@ class TDUserManager: NSObject {
     
     
     var user: TDUser?
+    lazy var fbLoginManager: LoginManager = {
+        return LoginManager()
+    }()
     
     typealias loginDoneBlock = (_ success:Bool, _ err: Error?, _ msg: String)->Void
     
