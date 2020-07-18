@@ -9,6 +9,11 @@ PODS:
     - AWSCore (~> 2.14.0)
     - AWSPluginsCore (= 1.0.4)
     - ReachabilitySwift (~> 5.0.0)
+  - AmplifyPlugins/AWSCognitoAuthPlugin (1.0.4):
+    - AWSAuthCore (~> 2.14.0)
+    - AWSCore (~> 2.14.0)
+    - AWSMobileClient (~> 2.14.0)
+    - AWSPluginsCore (= 1.0.4)
   - AmplifyPlugins/AWSDataStorePlugin (1.0.4):
     - AWSAuthCore (~> 2.14.0)
     - AWSCore (~> 2.14.0)
@@ -60,6 +65,7 @@ DEPENDENCIES:
   - Amplify
   - Amplify/Tools
   - AmplifyPlugins/AWSAPIPlugin
+  - AmplifyPlugins/AWSCognitoAuthPlugin
   - AmplifyPlugins/AWSDataStorePlugin
   - FBSDKLoginKit
   - JPVideoPlayer (~> 3.2.0-beta)
@@ -112,6 +118,6 @@ SPEC CHECKSUMS:
   YYImage: 1e1b62a9997399593e4b9c4ecfbbabbf1d3f3b54
   YYWebImage: 5f7f36aee2ae293f016d418c7d6ba05c4863e928
 
-PODFILE CHECKSUM: 118c7936e19cb199f186e1cbd26d963205923535
+PODFILE CHECKSUM: a54497746c36919f9f1ffc53c842d75f5836dd45
 
 COCOAPODS: 1.9.3

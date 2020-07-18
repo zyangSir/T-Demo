@@ -45,9 +45,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func initAmplifySDK() {
         let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
         do {
-           try Amplify.add(plugin:dataStorePlugin)
+           try Amplify.add(plugin: dataStorePlugin)
+           try Amplify.add(plugin: AWSCognitoAuthPlugin())
            try Amplify.configure()
-           print("Initialized Amplify successfully.");
+           print("Amplify configured with auth plugin");
            //Amplify.Logging.logLevel = .info
         } catch {
            print("Could not initialize Amplify: \(error)")

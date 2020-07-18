@@ -11,6 +11,8 @@
 		1A9D1FD8837242188D13B93A /* awsconfiguration.json in Resources */ = {isa = PBXBuildFile; fileRef = 98493D680A95443CAA2AE226 /* awsconfiguration.json */; };
 		242D7C43FEEC00812C63C5AC /* Pods_T_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E2AF7D2CFAEB7F4B8238DC80 /* Pods_T_Demo.framework */; };
 		3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */ = {isa = PBXBuildFile; fileRef = A320C886E84B444E9576545B /* TUser+Schema.swift */; };
+		5606238D24C2E63600AE6DCC /* TRegisteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5606238C24C2E63600AE6DCC /* TRegisteViewController.swift */; };
+		5606238F24C2E6CD00AE6DCC /* TCodeConfirmViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5606238E24C2E6CD00AE6DCC /* TCodeConfirmViewController.swift */; };
 		5622DEF524BC518200E8BD92 /* TVideoInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5622DEF424BC518200E8BD92 /* TVideoInfo.swift */; };
 		5622DEF824BDA26A00E8BD92 /* hls1.m3u8 in Resources */ = {isa = PBXBuildFile; fileRef = 5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */; };
 		5656069424C02CE500B0A1C7 /* ZSFilePather.m in Sources */ = {isa = PBXBuildFile; fileRef = 5656069224C02CE500B0A1C7 /* ZSFilePather.m */; };
@@ -63,6 +65,8 @@
 		250D17FCD6CC8DAC7F654F1D /* Pods-T-DemoTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.release.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.release.xcconfig"; sourceTree = "<group>"; };
 		41F39BB2151E228BD34E3905 /* Pods_T_DemoTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_T_DemoTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		55D238D10330A4AC62C46539 /* Pods-T-DemoTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-DemoTests.debug.xcconfig"; path = "Target Support Files/Pods-T-DemoTests/Pods-T-DemoTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5606238C24C2E63600AE6DCC /* TRegisteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TRegisteViewController.swift; sourceTree = "<group>"; };
+		5606238E24C2E6CD00AE6DCC /* TCodeConfirmViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TCodeConfirmViewController.swift; sourceTree = "<group>"; };
 		5622DEF424BC518200E8BD92 /* TVideoInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TVideoInfo.swift; sourceTree = "<group>"; };
 		5622DEF724BDA26A00E8BD92 /* hls1.m3u8 */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hls1.m3u8; sourceTree = "<group>"; };
 		5656069224C02CE500B0A1C7 /* ZSFilePather.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZSFilePather.m; sourceTree = "<group>"; };
@@ -344,6 +348,8 @@
 				56AFFCA024C14C3300C2973D /* Model */,
 				EBE329A224B6ED5D0036D673 /* TLoginViewController.swift */,
 				56AFFCA524C186B500C2973D /* Login.storyboard */,
+				5606238C24C2E63600AE6DCC /* TRegisteViewController.swift */,
+				5606238E24C2E6CD00AE6DCC /* TCodeConfirmViewController.swift */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -711,12 +717,14 @@
 				EBE3299D24B6ECB60036D673 /* TBaseViewController.swift in Sources */,
 				EBE3296624B6EA960036D673 /* SceneDelegate.swift in Sources */,
 				EBE329A524B6ED7F0036D673 /* TVideoListViewController.swift in Sources */,
+				5606238F24C2E6CD00AE6DCC /* TCodeConfirmViewController.swift in Sources */,
 				5656069824C02D2200B0A1C7 /* ZSExtendedLog.m in Sources */,
 				56AFFCA224C14CA800C2973D /* TDUser.swift in Sources */,
 				56AFFCA424C14F5D00C2973D /* TDUserManager.swift in Sources */,
 				E39092720ED74EF1AE251129 /* AmplifyModels.swift in Sources */,
 				C19643F1BA1048F298A44703 /* Priority.swift in Sources */,
 				84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */,
+				5606238D24C2E63600AE6DCC /* TRegisteViewController.swift in Sources */,
 				5622DEF524BC518200E8BD92 /* TVideoInfo.swift in Sources */,
 				3CFEE03E052C428880FDD173 /* TUser+Schema.swift in Sources */,
 			);
