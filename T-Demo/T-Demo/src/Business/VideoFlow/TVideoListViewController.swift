@@ -22,6 +22,10 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
     
     var videoAssetArr = [TVideoInfo]()
     
+    deinit {
+        unRegisteNotification()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -29,12 +33,18 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         //runAmplifyTest()
         self.title = "DevHub Demo"
         logoutBtn.layer.cornerRadius = logoutBtn.bounds.width/2
-        //弹出登录
         
-        SVProgressHUD.show(withStatus: "精彩马上开始")
-        DispatchQueue.global(qos: .background).async {
-            self.loadVideoAssets()
+        registeNotification()
+        //弹出登录
+        TDUserManager.sharedInstance.tryAutoLogin { (success, err, msg) in
+            if success == false {
+                let loginVc = TDLoginStoryBoard().instantiateInitialViewController()!
+                loginVc.modalPresentationStyle = .fullScreen
+                self.present(loginVc, animated: true, completion: nil)
+            }
         }
+        
+        
     }
     
     func runAmplifyTest() {
@@ -55,6 +65,26 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
     @IBAction func logoutBtnClicked(_ sender: Any) {
         
         
+    }
+    
+    // MARK: - Notification
+    func registeNotification() {
+        //监测登录成功通知
+        let noti = NotificationCenter.default
+        noti.addObserver(self, selector: #selector(onLoginSuccess), name: TD_LOGIN_SUCC_NOTIFICATION, object: nil)
+    }
+    
+    func unRegisteNotification() {
+        //移除通知
+        let noti = NotificationCenter.default
+        noti.removeObserver(self, name: TD_LOGIN_SUCC_NOTIFICATION, object: nil)
+    }
+    
+    @objc func onLoginSuccess() {
+        SVProgressHUD.show(withStatus: "精彩马上开始")
+        DispatchQueue.global(qos: .background).async {
+            self.loadVideoAssets()
+        }
     }
     
     

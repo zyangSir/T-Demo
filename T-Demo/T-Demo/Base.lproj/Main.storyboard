@@ -156,21 +156,6 @@
             </objects>
             <point key="canvasLocation" x="-729" y="204"/>
         </scene>
-        <!--Login View Controller-->
-        <scene sceneID="geb-mu-PrV">
-            <objects>
-                <viewController id="LJN-QM-1Uy" customClass="TLoginViewController" customModule="T_Demo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="bRE-aC-brN">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="hvx-d6-orR"/>
-                    </view>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="uIV-U2-G35" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-730" y="919"/>
-        </scene>
     </scenes>
     <resources>
         <image name="btn_logout" width="40" height="40"/>

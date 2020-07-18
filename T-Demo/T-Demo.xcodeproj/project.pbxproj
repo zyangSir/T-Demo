@@ -17,6 +17,8 @@
 		5656069824C02D2200B0A1C7 /* ZSExtendedLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 5656069624C02D2200B0A1C7 /* ZSExtendedLog.m */; };
 		56AFFCA224C14CA800C2973D /* TDUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFCA124C14CA800C2973D /* TDUser.swift */; };
 		56AFFCA424C14F5D00C2973D /* TDUserManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFCA324C14F5D00C2973D /* TDUserManager.swift */; };
+		56AFFCA624C186B500C2973D /* Login.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 56AFFCA524C186B500C2973D /* Login.storyboard */; };
+		56AFFCA924C187EC00C2973D /* TDCommonDefine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 56AFFCA824C187EC00C2973D /* TDCommonDefine.swift */; };
 		84C8FCB8ACDB44EFB7820B92 /* TUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = B35CCE0079304165B35E7ED2 /* TUser.swift */; };
 		BDCB9B10D36CE41DAEEEA9DE /* Pods_T_Demo_T_DemoUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 14A0D2970F5E88B2EC751718 /* Pods_T_Demo_T_DemoUITests.framework */; };
 		C19643F1BA1048F298A44703 /* Priority.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08A38F44B9E9481EBE5B6D84 /* Priority.swift */; };
@@ -70,6 +72,8 @@
 		5656069E24C0322C00B0A1C7 /* T-Demo-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "T-Demo-Bridging-Header.h"; sourceTree = "<group>"; };
 		56AFFCA124C14CA800C2973D /* TDUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDUser.swift; sourceTree = "<group>"; };
 		56AFFCA324C14F5D00C2973D /* TDUserManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDUserManager.swift; sourceTree = "<group>"; };
+		56AFFCA524C186B500C2973D /* Login.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Login.storyboard; sourceTree = "<group>"; };
+		56AFFCA824C187EC00C2973D /* TDCommonDefine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TDCommonDefine.swift; sourceTree = "<group>"; };
 		673506B8F2B845C38AEDB712 /* AmplifyModels.swift */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 4; includeInIndex = 0; lastKnownFileType = sourcecode.swift; name = AmplifyModels.swift; path = amplify/generated/models/AmplifyModels.swift; sourceTree = "<group>"; };
 		6E81D8B3D8C946FA9A818F2A /* amplifyconfiguration.json */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; path = amplifyconfiguration.json; sourceTree = "<group>"; };
 		72BB54257E7A40AD63CF76CB /* Pods-T-Demo-T-DemoUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-T-Demo-T-DemoUITests.release.xcconfig"; path = "Target Support Files/Pods-T-Demo-T-DemoUITests/Pods-T-Demo-T-DemoUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -228,6 +232,14 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		56AFFCA724C187D300C2973D /* Constant */ = {
+			isa = PBXGroup;
+			children = (
+				56AFFCA824C187EC00C2973D /* TDCommonDefine.swift */,
+			);
+			path = Constant;
+			sourceTree = "<group>";
+		};
 		64E5F63F11D34322B62AA967 /* AmplifyModels */ = {
 			isa = PBXGroup;
 			children = (
@@ -331,6 +343,7 @@
 			children = (
 				56AFFCA024C14C3300C2973D /* Model */,
 				EBE329A224B6ED5D0036D673 /* TLoginViewController.swift */,
+				56AFFCA524C186B500C2973D /* Login.storyboard */,
 			);
 			path = Login;
 			sourceTree = "<group>";
@@ -338,6 +351,7 @@
 		EBE3299724B6EC1B0036D673 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				56AFFCA724C187D300C2973D /* Constant */,
 				56AFFC9F24C14BDD00C2973D /* Manager */,
 				5656069024C02CE500B0A1C7 /* Util */,
 				EBE3299824B6EC830036D673 /* Base */,
@@ -503,6 +517,7 @@
 			files = (
 				EBE3297024B6EA990036D673 /* LaunchScreen.storyboard in Resources */,
 				EBE3296D24B6EA990036D673 /* Assets.xcassets in Resources */,
+				56AFFCA624C186B500C2973D /* Login.storyboard in Resources */,
 				EBE3296B24B6EA960036D673 /* Main.storyboard in Resources */,
 				E3CFFB0B72064F7AB848C9F0 /* amplifyconfiguration.json in Resources */,
 				5622DEF824BDA26A00E8BD92 /* hls1.m3u8 in Resources */,
@@ -687,6 +702,7 @@
 			files = (
 				EBE329A324B6ED5D0036D673 /* TLoginViewController.swift in Sources */,
 				EBE329A724B6ED8D0036D673 /* TVideoDetailViewController.swift in Sources */,
+				56AFFCA924C187EC00C2973D /* TDCommonDefine.swift in Sources */,
 				5656069424C02CE500B0A1C7 /* ZSFilePather.m in Sources */,
 				EBE329A924B6F6A40036D673 /* TVideoCell.swift in Sources */,
 				EBE3296424B6EA960036D673 /* AppDelegate.swift in Sources */,
