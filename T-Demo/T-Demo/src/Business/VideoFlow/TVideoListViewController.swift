@@ -38,9 +38,7 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         //弹出登录
         TDUserManager.sharedInstance.tryAutoLogin { (success, err, msg) in
             if success == false {
-                let loginVc = TDLoginStoryBoard().instantiateInitialViewController()!
-                loginVc.modalPresentationStyle = .fullScreen
-                self.present(loginVc, animated: true, completion: nil)
+                showLoginPage()
             }
         }
         
@@ -63,8 +61,19 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
     
     // MARK: - Action
     @IBAction func logoutBtnClicked(_ sender: Any) {
+        let accStr = "128"
+        let msg = String("确定要登出当前账号：*\(accStr)* ?")
+        let alertVC = UIAlertController(title: "登出", message: msg, preferredStyle: .alert)
+        let sureAction = UIAlertAction(title: "确定", style: .default) { (action) in
+            TDUserManager.sharedInstance.logout(done: nil)
+        }
         
+        let cancleAction = UIAlertAction(title: "取消", style: .cancel) { (action) in
+            
+        }
         
+        alertVC.addAction(sureAction)
+        alertVC.addAction(cancleAction)
     }
     
     // MARK: - Notification
@@ -72,18 +81,26 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         //监测登录成功通知
         let noti = NotificationCenter.default
         noti.addObserver(self, selector: #selector(onLoginSuccess), name: TD_LOGIN_SUCC_NOTIFICATION, object: nil)
+        noti.addObserver(self, selector: #selector(onLogoutSuccess), name: TD_LOGOUT_SUCC_NOTIFICATION, object: nil)
     }
     
     func unRegisteNotification() {
         //移除通知
         let noti = NotificationCenter.default
         noti.removeObserver(self, name: TD_LOGIN_SUCC_NOTIFICATION, object: nil)
+        noti.removeObserver(self, name: TD_LOGOUT_SUCC_NOTIFICATION, object: nil)
     }
     
     @objc func onLoginSuccess() {
         SVProgressHUD.show(withStatus: "精彩马上开始")
         DispatchQueue.global(qos: .background).async {
             self.loadVideoAssets()
+        }
+    }
+    
+    @objc func onLogoutSuccess() {
+        DispatchQueue.global(qos: .background).async {
+            self.showLoginPage()
         }
     }
     
@@ -223,5 +240,11 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
         let videoInfo = videoAssetArr[idPath!.row]
         let videoDetailVC = segue.destination as! TVideoDetailViewController
         videoDetailVC.videoInfo = videoInfo
+    }
+    
+    func showLoginPage(){
+        let loginVc = TDLoginStoryBoard().instantiateInitialViewController()!
+        loginVc.modalPresentationStyle = .fullScreen
+        self.present(loginVc, animated: true, completion: nil)
     }
 }

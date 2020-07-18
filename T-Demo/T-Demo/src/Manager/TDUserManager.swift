@@ -10,6 +10,7 @@ import UIKit
 import FBSDKLoginKit
 
 let TD_LOGIN_SUCC_NOTIFICATION = NSNotification.Name(rawValue: "TD_LOGIN_SUCC")
+let TD_LOGOUT_SUCC_NOTIFICATION = NSNotification.Name(rawValue: "TD_LOGOUT_SUCC")
 
 class TDUserManager: NSObject {
     static let sharedInstance = TDUserManager()
@@ -38,13 +39,21 @@ class TDUserManager: NSObject {
         }
     }
     
-    func logout(done: loginDoneBlock) {
+    func logout(done: loginDoneBlock?) {
         //user?.info?.token
         if user?.accType == .ACC_TYPE_AWS {
             //AWS登出
         }else if user?.accType == .ACC_TYPE_FACEBOOK {
             //FACEBOOK登出
+            fbLoginManager.logOut()
         }
+        
+        postLogoutSuccNotification()
+    }
+    
+    // MARK: - Notification
+    func postLogoutSuccNotification() {
+        NotificationCenter.default.post(name: TD_LOGOUT_SUCC_NOTIFICATION, object: nil)
     }
 
 }
