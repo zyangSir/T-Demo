@@ -87,7 +87,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tnx-cX-yCH">
-                                <rect key="frame" x="182" y="666" width="50" height="50"/>
+                                <rect key="frame" x="182" y="752" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="nAM-Gi-NQr"/>
                                     <constraint firstAttribute="height" constant="50" id="rNN-7M-dn5"/>
@@ -105,20 +105,20 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="你还可以选择以下方式登录" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KS2-xp-eob">
-                                <rect key="frame" x="135" y="641" width="144" height="17"/>
+                                <rect key="frame" x="135" y="727" width="144" height="17"/>
                                 <fontDescription key="fontDescription" name="PingFangSC-Regular" family="PingFang SC" pointSize="12"/>
                                 <color key="textColor" systemColor="systemGray2Color" red="0.68235294120000001" green="0.68235294120000001" blue="0.69803921570000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="highlightedColor" systemColor="systemGrayColor" red="0.5568627451" green="0.5568627451" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Oyv-Pj-tS0">
-                                <rect key="frame" x="45" y="649.5" width="82" height="0.5"/>
+                                <rect key="frame" x="45" y="735.5" width="82" height="0.5"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="ehq-Pf-CH2"/>
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jk2-ur-w79">
-                                <rect key="frame" x="287" y="649.5" width="82" height="0.5"/>
+                                <rect key="frame" x="287" y="735.5" width="82" height="0.5"/>
                                 <color key="backgroundColor" systemColor="systemGray3Color" red="0.78039215689999997" green="0.78039215689999997" blue="0.80000000000000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="0.5" id="vJx-aC-Rco"/>
@@ -164,7 +164,7 @@
                             <constraint firstItem="hCH-1G-HcB" firstAttribute="trailing" secondItem="Jk2-ur-w79" secondAttribute="trailing" constant="45" id="cCc-xK-QTd"/>
                             <constraint firstItem="Jk2-ur-w79" firstAttribute="centerY" secondItem="KS2-xp-eob" secondAttribute="centerY" id="dli-f5-cpX"/>
                             <constraint firstItem="hCH-1G-HcB" firstAttribute="trailing" secondItem="kW8-Pg-mEe" secondAttribute="trailing" constant="45" id="j7O-3d-tFk"/>
-                            <constraint firstItem="hCH-1G-HcB" firstAttribute="bottom" secondItem="Tnx-cX-yCH" secondAttribute="bottom" constant="146" id="jae-kS-TKa"/>
+                            <constraint firstItem="hCH-1G-HcB" firstAttribute="bottom" secondItem="Tnx-cX-yCH" secondAttribute="bottom" constant="60" id="jae-kS-TKa"/>
                             <constraint firstItem="xjh-v5-AIy" firstAttribute="leading" secondItem="kW8-Pg-mEe" secondAttribute="leading" id="l7N-P8-B2e"/>
                             <constraint firstItem="kW8-Pg-mEe" firstAttribute="top" secondItem="xjh-v5-AIy" secondAttribute="bottom" constant="37" id="qow-AJ-QfJ"/>
                             <constraint firstItem="KS2-xp-eob" firstAttribute="leading" secondItem="Oyv-Pj-tS0" secondAttribute="trailing" constant="8" id="uha-uf-JHw"/>
@@ -213,7 +213,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.18823529410000001" green="0.16078431369999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="nickname"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>
@@ -231,7 +231,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.18823529410000001" green="0.16078431369999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="new-password"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>
@@ -249,7 +249,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.18823529410000001" green="0.16078431369999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="email"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>
@@ -345,7 +345,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.18823529410000001" green="0.16078431369999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="tel"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation" textContentType="one-time-code"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>

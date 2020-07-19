@@ -43,12 +43,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     // MARK: AWS SDK
     func initAmplifySDK() {
-        let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
+        //let dataStorePlugin = AWSDataStorePlugin(modelRegistration: AmplifyModels())
         do {
-           try Amplify.add(plugin: dataStorePlugin)
+           //try Amplify.add(plugin: dataStorePlugin)
            try Amplify.add(plugin: AWSCognitoAuthPlugin())
            try Amplify.configure()
-           print("Amplify configured with auth plugin");
+           print("Amplify configured with auth plugin, datastore");
            //Amplify.Logging.logLevel = .info
         } catch {
            print("Could not initialize Amplify: \(error)")

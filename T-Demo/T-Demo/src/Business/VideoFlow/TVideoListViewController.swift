@@ -28,19 +28,21 @@ class TVideoListViewController: TBaseViewController, UITableViewDataSource, UITa
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         // Do any additional setup after loading the view.
         //runAmplifyTest()
         self.title = "DevHub Demo"
         logoutBtn.layer.cornerRadius = logoutBtn.bounds.width/2
         
         registeNotification()
+        // 因为是Demo为了演示，这里就不做自动登录了，每次都需要重新登录，真实的产品中不允许这样做!!!
+        TDUserManager.sharedInstance.logout(done: nil)
         //弹出登录
-        TDUserManager.sharedInstance.tryAutoLogin { (success, err, msg) in
-            if success == false {
-                showLoginPage()
-            }
-        }
+//        TDUserManager.sharedInstance.tryAutoLogin { (success, err, msg) in
+//            if success == false {
+//                showLoginPage()
+//            }
+//        }
         
         
     }

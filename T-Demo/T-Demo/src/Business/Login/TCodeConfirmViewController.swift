@@ -29,19 +29,29 @@ class TCodeConfirmViewController: TBaseViewController {
     //MARK: - Action
     
     @IBAction func goBtnClicked(_ sender: Any) {
+        SVProgressHUD.show(withStatus: "稍等片刻")
+        confirmCodeTextField.resignFirstResponder()
         confirmSignUp(for: userName!, with: confirmCodeTextField.text!)
     }
     
     func confirmSignUp(for username: String, with confirmationCode: String) {
         _ = Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode) { result in
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
             switch result {
             case .success(_):
                 print("Confirm signUp succeeded")
-                self.navigationController?.popToRootViewController(animated: true)
-                self.postRegisteSuccessNotification()
+                DispatchQueue.main.async {
+                    self.navigationController?.popToRootViewController(animated: true)
+                    SVProgressHUD.showSuccess(withStatus: "注册完成!")
+                    self.postRegisteSuccessNotification()
+                }
             case .failure(let error):
                 print("An error occurred while registering a user \(error)")
-                SVProgressHUD.showError(withStatus: "注册失败: \(error)")
+                DispatchQueue.main.async {
+                    SVProgressHUD.showError(withStatus: "注册失败: \(error)")
+                }
             }
         }
     }

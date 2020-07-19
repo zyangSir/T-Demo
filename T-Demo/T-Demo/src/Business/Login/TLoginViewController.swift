@@ -63,11 +63,15 @@ class TLoginViewController: TBaseViewController {
     // 普通AWS 登录
     @IBAction func loginBtnClick(_ sender: Any) {
         let userManager = TDUserManager.sharedInstance
-        userManager.login(acc: nil, psw: nil, type: .ACC_TYPE_AWS) { (success, err, msg) in
+        SVProgressHUD.show(withStatus: "稍等片刻")
+        userManager.login(acc: accountTextField.text, psw: pswTextField.text, type: .ACC_TYPE_AWS) { (success, err, msg) in
+            SVProgressHUD.dismiss()
             if success == true {
                 //登录成功了
-                self.postLoginSuccNotification()
-                self.dismiss(animated: true, completion: nil)
+                DispatchQueue.main.async {
+                    self.postLoginSuccNotification()
+                    self.dismiss(animated: true, completion: nil)
+                }
             }else {
                 SVProgressHUD.showError(withStatus: msg)
             }
