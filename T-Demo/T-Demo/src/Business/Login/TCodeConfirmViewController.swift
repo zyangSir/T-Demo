@@ -7,8 +7,16 @@
 //
 
 import UIKit
+import Amplify
+import SVProgressHUD
 
+let TD_REGISTER_SUCC_NOTIFICATION = NSNotification.Name(rawValue: "TD_REGISTER_SUCC")
 class TCodeConfirmViewController: TBaseViewController {
+    
+    var userName: String?
+    var psw: String?
+    
+    @IBOutlet weak var confirmCodeTextField: UITextField!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,6 +25,32 @@ class TCodeConfirmViewController: TBaseViewController {
     }
     
 
+    
+    //MARK: - Action
+    
+    @IBAction func goBtnClicked(_ sender: Any) {
+        confirmSignUp(for: userName!, with: confirmCodeTextField.text!)
+    }
+    
+    func confirmSignUp(for username: String, with confirmationCode: String) {
+        _ = Amplify.Auth.confirmSignUp(for: username, confirmationCode: confirmationCode) { result in
+            switch result {
+            case .success(_):
+                print("Confirm signUp succeeded")
+                self.navigationController?.popToRootViewController(animated: true)
+                self.postRegisteSuccessNotification()
+            case .failure(let error):
+                print("An error occurred while registering a user \(error)")
+                SVProgressHUD.showError(withStatus: "注册失败: \(error)")
+            }
+        }
+    }
+    
+    
+    func postRegisteSuccessNotification() {
+        let noti = NotificationCenter.default
+        noti.post(name: TD_REGISTER_SUCC_NOTIFICATION, object: ["userName": userName!, "psw": psw!])
+    }
     /*
     // MARK: - Navigation
 
@@ -27,4 +61,8 @@ class TCodeConfirmViewController: TBaseViewController {
     }
     */
 
+}
+
+func TCodeConfirmViewControllerStoryBoard() -> TCodeConfirmViewController {
+    TDLoginStoryBoard().instantiateViewController(withIdentifier: "TCodeConfirmViewController") as! TCodeConfirmViewController
 }

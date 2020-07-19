@@ -19,17 +19,45 @@ class TLoginViewController: TBaseViewController {
     
     @IBOutlet weak var registeBtn: UIButton!
     
+    deinit {
+        unRegisteNotification()
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        registeNotification()
+    }
+    
+    // MARK: - Notification
+    func registeNotification() {
+        //监测登录成功通知
+        let noti = NotificationCenter.default
+        noti.addObserver(self, selector: #selector(onRegisteSuccess(noti:)), name: TD_REGISTER_SUCC_NOTIFICATION, object: nil)
+    }
+    
+    func unRegisteNotification() {
+        //移除通知
+        let noti = NotificationCenter.default
+        noti.removeObserver(self, name: TD_REGISTER_SUCC_NOTIFICATION, object: nil)
+    }
+    
+    @objc func onRegisteSuccess(noti: Notification) {
+        //自动填充注册好的账号，密码
+        let info = noti.object as! Dictionary<String, String>
+        accountTextField.text = info["userName"]
+        pswTextField.text = info["psw"]
+        
+        
     }
     
     
     // MARK: - Action
     
     @IBAction func registeBtnClicked(_ sender: Any) {
+        let registeVC = TRegisteViewControllerStoryBoard()
+        self.navigationController?.pushViewController(registeVC, animated: true)
     }
     
     // 普通AWS 登录

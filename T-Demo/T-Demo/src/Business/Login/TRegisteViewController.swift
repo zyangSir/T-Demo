@@ -7,9 +7,19 @@
 //
 
 import UIKit
+import Amplify
 
 class TRegisteViewController: TBaseViewController {
 
+    
+    @IBOutlet weak var accounTextField: UITextField!
+    
+    @IBOutlet weak var pswTextField: UITextField!
+    
+    @IBOutlet weak var emailTextField: UITextField!
+    
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -17,6 +27,34 @@ class TRegisteViewController: TBaseViewController {
     }
     
 
+    // MARK: - Action
+    @IBAction func goBtnClicked(_ sender: Any) {
+        
+        let email = emailTextField.text
+        let username = accounTextField.text
+        let password = pswTextField.text
+        
+        let userAttributes = [AuthUserAttribute(.email, value: email!)]
+        let options = AuthSignUpRequest.Options(userAttributes: userAttributes)
+        _ = Amplify.Auth.signUp(username: username!, password: password!, options: options) { result in
+            switch result {
+            case .success(let signUpResult):
+                if case let .confirmUser(deliveryDetails, _) = signUpResult.nextStep {
+                    print("Delivery details \(String(describing: deliveryDetails))")
+                } else {
+                    print("SignUp Complete")
+                    
+                    let codeConfirmVC = TCodeConfirmViewControllerStoryBoard()
+                    self.navigationController?.pushViewController(codeConfirmVC, animated: true)
+                }
+            case .failure(let error):
+                print("An error occurred while registering a user \(error)")
+            }
+        }
+        
+    }
+    
+    
     /*
     // MARK: - Navigation
 
@@ -27,4 +65,9 @@ class TRegisteViewController: TBaseViewController {
     }
     */
 
+}
+
+
+func TRegisteViewControllerStoryBoard() -> TRegisteViewController {
+    TDLoginStoryBoard().instantiateViewController(withIdentifier: "TRegisteViewController") as! TRegisteViewController
 }
