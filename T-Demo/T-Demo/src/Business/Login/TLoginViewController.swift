@@ -60,6 +60,13 @@ class TLoginViewController: TBaseViewController {
         self.navigationController?.pushViewController(registeVC, animated: true)
     }
     
+    
+    @IBAction func bgTapped(_ sender: Any) {
+        accountTextField.resignFirstResponder()
+        pswTextField.resignFirstResponder()
+        
+    }
+    
     // 普通AWS 登录
     @IBAction func loginBtnClick(_ sender: Any) {
         let userManager = TDUserManager.sharedInstance

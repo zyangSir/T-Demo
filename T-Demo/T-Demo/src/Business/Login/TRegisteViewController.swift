@@ -40,6 +40,14 @@ class TRegisteViewController: TBaseViewController {
     
 
     // MARK: - Action
+    
+    @IBAction func bgTapped(_ sender: UITapGestureRecognizer) {
+        accounTextField.resignFirstResponder()
+        pswTextField.resignFirstResponder()
+        emailTextField.resignFirstResponder()
+    }
+    
+    
     @IBAction func goBtnClicked(_ sender: Any) {
         
         //藏起键盘

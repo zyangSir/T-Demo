@@ -147,6 +147,7 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="Oyv-Pj-tS0" firstAttribute="centerY" secondItem="KS2-xp-eob" secondAttribute="centerY" id="1hF-B7-bwO"/>
                             <constraint firstItem="Tnx-cX-yCH" firstAttribute="centerX" secondItem="hCH-1G-HcB" secondAttribute="centerX" id="49m-ub-1sf"/>
@@ -172,6 +173,9 @@
                             <constraint firstItem="O8o-dN-kyw" firstAttribute="trailing" secondItem="kW8-Pg-mEe" secondAttribute="trailing" id="xSq-Pg-LtJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hCH-1G-HcB"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="P8z-Uy-Tf7" appends="YES" id="CjO-q6-7ZG"/>
+                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="AbZ-eT-pT7"/>
                     <connections>
@@ -181,6 +185,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HeX-Da-FyX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="P8z-Uy-Tf7">
+                    <connections>
+                        <action selector="bgTapped:" destination="3s1-QP-ZVa" id="ocz-7T-JRq"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-1441" y="913"/>
         </scene>
@@ -249,7 +258,7 @@
                                 </constraints>
                                 <color key="textColor" red="0.18823529410000001" green="0.16078431369999999" blue="0.14901960780000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="email"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="name"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                         <real key="value" value="6"/>
@@ -280,6 +289,7 @@
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="t9s-uH-8h6" firstAttribute="leading" secondItem="o3u-Gx-V0t" secondAttribute="leading" id="3aT-97-1qv"/>
                             <constraint firstItem="t9s-uH-8h6" firstAttribute="top" secondItem="o3u-Gx-V0t" secondAttribute="bottom" constant="12" id="42o-Si-pgo"/>
@@ -299,6 +309,9 @@
                             <constraint firstItem="o3u-Gx-V0t" firstAttribute="top" secondItem="Zrg-ox-BtC" secondAttribute="top" constant="80" id="xnD-RD-oeE"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zrg-ox-BtC"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="UD6-RT-E4c" appends="YES" id="f4E-0I-dR1"/>
+                        </connections>
                     </view>
                     <connections>
                         <outlet property="accounTextField" destination="iEm-Iv-f5G" id="JWV-3w-bg7"/>
@@ -307,6 +320,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FN6-gE-BIE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="UD6-RT-E4c">
+                    <connections>
+                        <action selector="bgTapped:" destination="FtN-c3-rhb" id="rVi-1W-Lpd"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-539.13043478260875" y="912.72321428571422"/>
         </scene>
